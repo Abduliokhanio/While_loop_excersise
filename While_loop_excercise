@@ -1,0 +1,27 @@
+# include <iostream>
+# include <vector>
+
+int main(){
+	std::vector<int> vec{8,6,2,4,1,5,9,3,7,10};
+	
+	std::cout << "Please enter an Number: " << std::endl;
+	int num;
+	std::cin >> num;
+	while (num <= 0 || num >=11){
+		std::cout << "Pleae enter another number" << std::endl;
+		std::cin >> num;}
+	std::cout <<  std::endl;
+	
+	
+	int count {1};
+	int i {};
+	
+	while ( vec[i] != num ){count ++; i++;}
+	for (auto i : vec){
+		std::cout << i << std::endl;
+		}
+		
+	std::cout << std::endl;
+	std::cout << num << " doesnt occur until " << count << " number's later"  << std::endl; 
+	return 0;
+	}
